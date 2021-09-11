@@ -19,13 +19,13 @@ public class kycDetails {
     private String accounttype;
 
     @Column(name = "IFSC_code", nullable = false)
-    private String IFSCcode;
+    private String ifsccode;
+
 
     @Column(name = "bank_name", nullable = false)
     private String bankname;
 
     
-
     //Setters And Getters
     public long getUserId() {
         return userId;
@@ -59,12 +59,12 @@ public class kycDetails {
         this.accounttype = accounttype;
     }
 
-    public String getIFSCcode() {
-        return IFSCcode;
+    public String getIfsccode() {
+        return ifsccode;
     }
 
-    public void setIFSCcode(String iFSCcode) {
-        IFSCcode = iFSCcode;
+    public void setIfsccode(String ifsccode) {
+        this.ifsccode = ifsccode;
     }
 
     public String getBankname() {
@@ -77,10 +77,9 @@ public class kycDetails {
 
     @Override
     public String toString() {
-        return "kycDetails [IFSCcode=" + IFSCcode + ", accountname=" + accountname + ", accountnumber=" + accountnumber
+        return "kycDetails [IFSCcode=" + ifsccode + ", accountname=" + accountname + ", accountnumber=" + accountnumber
                 + ", accounttype=" + accounttype + ", bankname=" + bankname + ", userId=" + userId + "]";
     }
+    
 
-    
-    
 }

@@ -35,6 +35,9 @@ public class profilesController {
     @Autowired
     private kycDetailsRepository kycdetailsrepo;
 
+    
+  
+
 
 
     //RestAPI For Getting basic details by Id
@@ -76,6 +79,7 @@ public class profilesController {
 
         return ResponseEntity.ok().body(obj);
     }
+
   
     //RestAPI For Posting basic Details 
     @PostMapping("/basicdetails")
@@ -84,9 +88,10 @@ public class profilesController {
         Map response = new HashMap<>();
         response.put("success",true);
         response.put("userId",bDetails.getUserId());
-        response.put("message","Basic Saved Successfully");
+        response.put("message","Basic Details Saved Successfully");
         return response;
     }
+
 
     //RestAPI For Posting bank Details 
     @PostMapping("/bankdetails")
@@ -95,9 +100,10 @@ public class profilesController {
         Map response = new HashMap<>();
         response.put("success",true);
         response.put("userId",bDetails.getUserId());
-        response.put("message","Basic Saved Successfully");
+        response.put("message","Bank Details Saved Successfully");
         return response;
     }
+    
 
     //RestAPI For Posting KYC Details 
     @PostMapping("/kycdetails")
@@ -106,7 +112,7 @@ public class profilesController {
         Map response = new HashMap<>();
         response.put("success",true);
         response.put("userId",bDetails.getUserId());
-        response.put("message","Basic Saved Successfully");
+        response.put("message","KYC Details Saved Successfully");
         return response;
     }
 }
